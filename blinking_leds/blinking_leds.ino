@@ -10,12 +10,12 @@ void setup() {
         pinMode(BLUE_PIN, OUTPUT);
 
 }
-
+// i feel sick
 void loop() {
         for (int pin = 3; pin < 10; pin += 3){
-                for (int brightness = 0; brightness <= 0; brightness++){
+                for (int brightness = 0; brightness <= 255; brightness++){
                         analogWrite(pin, brightness);
-                        delay(5);
+                        delay(round((51 - brightness / 5) / 4)); // bright leds hurt my eyes
                 }
                 digitalWrite(pin, 0);
         }
